@@ -19,7 +19,8 @@ const app = express();
 
 app.use('/graphql', graphqlHTTP({
     schema,
-    root
+    rootValue: root,
+    graphiql: true
 }));
 
 app.listen(3000, () => {
